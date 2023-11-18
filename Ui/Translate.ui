@@ -24,8 +24,7 @@
   </property>
   <widget class="QWidget" name="centralwidget">
    <property name="styleSheet">
-    <string notr="true">
-</string>
+    <string notr="true"/>
    </property>
    <widget class="QFrame" name="frame">
     <property name="geometry">
@@ -102,6 +101,9 @@ padding:15px 1px 2px 5px;
 
 
 }</string>
+      </property>
+      <property name="placeholderText">
+       <string>ترجمه</string>
       </property>
      </widget>
     </widget>
@@ -190,6 +192,9 @@ border-radius: 20px;
         <height>17</height>
        </size>
       </property>
+      <property name="flat">
+       <bool>false</bool>
+      </property>
      </widget>
     </widget>
     <widget class="QComboBox" name="comboDest">
@@ -212,16 +217,23 @@ border-radius: 20px;
       <enum>Qt::LeftToRight</enum>
      </property>
      <property name="styleSheet">
-      <string notr="true">QComboBox{	
+      <string notr="true">QComboBox{
+border:2px solid #ffdb70;
+	background-color: rgb(255, 255, 255);
+padding-left:5px;
+}
+QFrame{
+border:none;
+padding-left:5px;
+border-radius:3px;
 background-color: rgb(255, 255, 255);
-border: 2px solid #ffdb70;
 }</string>
      </property>
     </widget>
     <widget class="QLabel" name="Title">
      <property name="geometry">
       <rect>
-       <x>30</x>
+       <x>32</x>
        <y>18</y>
        <width>231</width>
        <height>31</height>
@@ -230,9 +242,9 @@ border: 2px solid #ffdb70;
      <property name="font">
       <font>
        <family>A Salamat</family>
-       <pointsize>9</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
        <kerning>true</kerning>
       </font>
      </property>
@@ -256,6 +268,9 @@ border:none;</string>
        <width>25</width>
        <height>25</height>
       </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
      </property>
      <property name="styleSheet">
       <string notr="true"/>
@@ -300,15 +315,27 @@ border:none;</string>
       <string notr="true">QComboBox{
 border:2px solid #ffdb70;
 	background-color: rgb(255, 255, 255);
+padding-left:5px;
 }
 QFrame{
 border:none;
+padding-left:5px;
+border-radius:3px;
+background-color: rgb(255, 255, 255);
 }</string>
      </property>
     </widget>
    </widget>
   </widget>
  </widget>
+ <tabstops>
+  <tabstop>txtSrc</tabstop>
+  <tabstop>comboSrc</tabstop>
+  <tabstop>comboDest</tabstop>
+  <tabstop>MicButton</tabstop>
+  <tabstop>txtDest</tabstop>
+  <tabstop>ExitButton</tabstop>
+ </tabstops>
  <resources>
   <include location="QRC/images.qrc"/>
  </resources>

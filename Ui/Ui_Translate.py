@@ -19,8 +19,7 @@ class Ui_Translate(object):
         Translate.setLayoutDirection(QtCore.Qt.LayoutDirection.RightToLeft)
         Translate.setStyleSheet("")
         self.centralwidget = QtWidgets.QWidget(parent=Translate)
-        self.centralwidget.setStyleSheet("\n"
-"")
+        self.centralwidget.setStyleSheet("")
         self.centralwidget.setObjectName("centralwidget")
         self.frame = QtWidgets.QFrame(parent=self.centralwidget)
         self.frame.setGeometry(QtCore.QRect(0, 0, 650, 600))
@@ -54,7 +53,6 @@ class Ui_Translate(object):
         font.setFamily("Gandom")
         font.setPointSize(12)
         font.setBold(False)
-        
         self.txtDest.setFont(font)
         self.txtDest.setStyleSheet("QPlainTextEdit{\n"
 "color: rgb(255, 255, 255);\n"
@@ -82,7 +80,6 @@ class Ui_Translate(object):
         font.setFamily("Gandom")
         font.setPointSize(12)
         font.setBold(False)
-        
         self.txtSrc.setFont(font)
         self.txtSrc.setStyleSheet("QPlainTextEdit{\n"
 "\n"
@@ -107,8 +104,8 @@ class Ui_Translate(object):
         icon.addPixmap(QtGui.QPixmap("D:\Project\Final\ToolBox\Images\mic.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.MicButton.setIcon(icon)
         self.MicButton.setIconSize(QtCore.QSize(17, 17))
+        self.MicButton.setFlat(False)
         self.MicButton.setObjectName("MicButton")
-        self.MicButton.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.comboDest = QtWidgets.QComboBox(parent=self.frame)
         self.comboDest.setGeometry(QtCore.QRect(53, 350, 200, 22))
         font = QtGui.QFont()
@@ -119,23 +116,22 @@ class Ui_Translate(object):
         self.comboDest.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.comboDest.setStyleSheet("QComboBox{\n"
 "border:2px solid #ffdb70;\n"
-"padding-left:5px;\n"
 "    background-color: rgb(255, 255, 255);\n"
+"padding-left:5px;\n"
 "}\n"
 "QFrame{\n"
 "border:none;\n"
-"padding:5px;\n"
-"background-color: white;\n"
-"border-radius:5px;\n"
+"padding-left:5px;\n"
+"border-radius:3px;\n"
+"background-color: rgb(255, 255, 255);\n"
 "}")
         self.comboDest.setObjectName("comboDest")
         self.Title = QtWidgets.QLabel(parent=self.frame)
-        self.Title.setGeometry(QtCore.QRect(30, 18, 231, 31))
+        self.Title.setGeometry(QtCore.QRect(32, 18, 231, 31))
         font = QtGui.QFont()
         font.setFamily("A Salamat")
-        font.setPointSize(9)
-        font.setBold(True)
-        
+        font.setPointSize(10)
+        font.setBold(False)
         font.setKerning(True)
         self.Title.setFont(font)
         self.Title.setStyleSheet("\n"
@@ -145,6 +141,7 @@ class Ui_Translate(object):
         self.Title.setObjectName("Title")
         self.ExitButton = QtWidgets.QPushButton(parent=self.frame)
         self.ExitButton.setGeometry(QtCore.QRect(605, 20, 25, 25))
+        self.ExitButton.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.ExitButton.setStyleSheet("")
         self.ExitButton.setText("")
         icon1 = QtGui.QIcon()
@@ -153,7 +150,6 @@ class Ui_Translate(object):
         self.ExitButton.setIconSize(QtCore.QSize(20, 20))
         self.ExitButton.setFlat(True)
         self.ExitButton.setObjectName("ExitButton")
-        self.ExitButton.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))        
         self.comboSrc = QtWidgets.QComboBox(parent=self.frame)
         self.comboSrc.setGeometry(QtCore.QRect(53, 90, 200, 22))
         font = QtGui.QFont()
@@ -164,22 +160,28 @@ class Ui_Translate(object):
         self.comboSrc.setLayoutDirection(QtCore.Qt.LayoutDirection.LeftToRight)
         self.comboSrc.setStyleSheet("QComboBox{\n"
 "border:2px solid #ffdb70;\n"
-"padding-left:5px;\n"
 "    background-color: rgb(255, 255, 255);\n"
+"padding-left:5px;\n"
 "}\n"
 "QFrame{\n"
 "border:none;\n"
-"padding:5px;\n"
-"background-color: white;\n"
-"border-radius:5px;\n"
+"padding-left:5px;\n"
+"border-radius:3px;\n"
+"background-color: rgb(255, 255, 255);\n"
 "}")
         self.comboSrc.setObjectName("comboSrc")
         Translate.setCentralWidget(self.centralwidget)
 
         self.retranslateUi(Translate)
         QtCore.QMetaObject.connectSlotsByName(Translate)
+        Translate.setTabOrder(self.txtSrc, self.comboSrc)
+        Translate.setTabOrder(self.comboSrc, self.comboDest)
+        Translate.setTabOrder(self.comboDest, self.MicButton)
+        Translate.setTabOrder(self.MicButton, self.txtDest)
+        Translate.setTabOrder(self.txtDest, self.ExitButton)
 
     def retranslateUi(self, Translate):
         _translate = QtCore.QCoreApplication.translate
         Translate.setWindowTitle(_translate("Translate", "Translate"))
+        self.txtDest.setPlaceholderText(_translate("Translate", "ترجمه"))
         self.Title.setText(_translate("Translate", "Toolbox <span style=\" font-size:11pt; font-weight:600;\">-</span> Translate"))
