@@ -514,8 +514,8 @@ background-color:qlineargradient(spread:pad, x1:0.006, y1:0.585, x2:1, y2:0, sto
       <font>
        <family>A Salamat</family>
        <pointsize>9</pointsize>
-       <weight>75</weight>
-       <bold>true</bold>
+       <weight>50</weight>
+       <bold>false</bold>
        <kerning>true</kerning>
       </font>
      </property>
