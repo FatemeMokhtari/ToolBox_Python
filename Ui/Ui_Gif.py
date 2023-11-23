@@ -74,7 +74,7 @@ class Ui_RemoveBG(object):
 "}")
         self.selectfile_btn.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../Images/chooseVideo.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon.addPixmap(QtGui.QPixmap(r"D:\Project\Final\ToolBox\Images\chooseVideo.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.selectfile_btn.setIcon(icon)
         self.selectfile_btn.setIconSize(QtCore.QSize(27, 27))
         self.selectfile_btn.setCheckable(True)
