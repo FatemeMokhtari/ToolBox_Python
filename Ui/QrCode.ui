@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>500</width>
+      <height>300</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame{
+	background-color:#14213d;
+	border:6px solid #FFDB70;
+border-radius:15px;
+}
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="btnshow">
+     <property name="geometry">
+      <rect>
+       <x>270</x>
+       <y>180</y>
+       <width>100</width>
+       <height>42</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Gandom</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+
+border-radius:10px;
+
+background-color:qlineargradient(spread:pad, x1:0.006, y1:0.585, x2:1, y2:0, stop:0.369318 rgba(246, 176, 66, 255), stop:1 rgba(249, 237, 78, 255));
+color: black;
+}</string>
+     </property>
+     <property name="text">
+      <string>نمایش بارکد</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="savebtn">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>180</y>
+       <width>100</width>
+       <height>42</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Gandom</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+
+border-radius:10px;
+
+background-color:qlineargradient(spread:pad, x1:0.006, y1:0.585, x2:1, y2:0, stop:0.369318 rgba(246, 176, 66, 255), stop:1 rgba(249, 237, 78, 255));
+color: black;
+}</string>
+     </property>
+     <property name="text">
+      <string>ذخیره بارکد</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="txtUrl">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>105</y>
+       <width>201</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Gandom</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QLineEdit {
+    border-radius:5px;
+    margin: 0;
+padding-left:6px;
+padding-right:6px;
+}
+</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>100</y>
+       <width>111</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Gandom</family>
+       <pointsize>13</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:none;
+color: qlineargradient(spread:pad, x1:0.006, y1:0.585, x2:1, y2:0, stop:0.369318 rgba(246, 176, 66, 255), stop:1 rgba(249, 237, 78, 255));</string>
+     </property>
+     <property name="text">
+      <string>لینک / متن :</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ExitButton">
+     <property name="geometry">
+      <rect>
+       <x>455</x>
+       <y>20</y>
+       <width>25</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../Images/Exit.png</normaloff>../Images/Exit.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>20</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Title">
+     <property name="geometry">
+      <rect>
+       <x>32</x>
+       <y>18</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>A Salamat</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+color: #a7a7a7;
+border:none;</string>
+     </property>
+     <property name="text">
+      <string>Toolbox &lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;-&lt;/span&gt; Qr Code</string>
+     </property>
+     <property name="scaledContents">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>170</x>
+       <y>243</y>
+       <width>151</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Gandom</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:none;
+color: white;</string>
+     </property>
+     <property name="text">
+      <string>فایل ذخیره شد</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <zorder>label</zorder>
+    <zorder>btnshow</zorder>
+    <zorder>savebtn</zorder>
+    <zorder>txtUrl</zorder>
+    <zorder>ExitButton</zorder>
+    <zorder>Title</zorder>
+    <zorder>label_2</zorder>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
