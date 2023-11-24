@@ -71,8 +71,12 @@ class Weather(QMainWindow):
                 self.ui.WindLBL.setText("")
                 self.ui.SunsetLBL.setText("")
         
-        
+        def close():
+            sys.exit(app.exec()) 
+            
+            
         self.ui.searchBtn.clicked.connect(search)
+        self.ui.ExitButton.clicked.connect(close)
         self.show()
         
         

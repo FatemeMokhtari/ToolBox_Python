@@ -53,7 +53,7 @@ class PDFCreator(QMainWindow):
         
         
         def selectfile():
-            #try:
+            try:
                 parent = None 
                 filters = "Image (*.png *.jpg *.jpeg)" 
                 title = "Select Files"
@@ -78,8 +78,8 @@ class PDFCreator(QMainWindow):
                     self.ui.selectfile_btn.setEnabled(False)
                     self.ui.convert_btn.setEnabled(True)                    
                     self.ui.pushButton.setVisible(True)
-            #except e:
-            #    print("error" + e)
+            except :
+                print("error")
                     
         def sa(filepath):
             try:            
