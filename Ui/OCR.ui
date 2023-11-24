@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>OCR</class>
+ <widget class="QMainWindow" name="OCR">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>500</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>500</width>
+      <height>400</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">QFrame{
+	background-color:#14213d;
+	border:6px solid #FFDB70;
+border-radius:15px;
+}
+
+
+</string>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QRadioButton" name="persian_rdbtn">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>70</y>
+       <width>111</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Gandom</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QRadioButton{
+color: rgb(255, 255, 255);
+}
+
+QRadioButton::indicator::checked{
+width:15px;
+height:15px;
+  border-radius:7px;	
+	background-color: qlineargradient(spread:pad, x1:0.006, y1:0.585, x2:1, y2:0, stop:0.369318 rgba(246, 176, 66, 255), stop:1 rgba(249, 237, 78, 255));
+	color: rgb(255, 255, 255);
+}
+QRadioButton::indicator::unchecked {
+width:12px;
+height:12px;
+  border-radius:7px;
+	border:2px solid qlineargradient(spread:pad, x1:0.006, y1:0.585, x2:1, y2:0, stop:0.369318 rgba(246, 176, 66, 255), stop:1 rgba(249, 237, 78, 255));;
+	background-color: none;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>فارسی</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="createtxt_btn">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>330</y>
+       <width>100</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Gandom</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border: 2px solid qlineargradient(spread:pad, x1:0.006, y1:0.585, x2:1, y2:0, stop:0.369318 rgba(246, 176, 66, 255), stop:1 rgba(249, 237, 78, 255));
+border-radius:20px;
+background-color:qlineargradient(spread:pad, x1:0.006, y1:0.585, x2:1, y2:0, stop:0.369318 rgba(246, 176, 66, 255), stop:1 rgba(249, 237, 78, 255));
+color: black;   
+}
+QPushButton:disabled{
+background-color: rgb(167, 167, 167);
+border:none;
+	color:#14213d;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>ذخیره فایل</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../Images/save.png</normaloff>../Images/save.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="chooseimage_btn">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>110</y>
+       <width>111</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Gandom</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QPushButton{
+border: 2px solid qlineargradient(spread:pad, x1:0.006, y1:0.585, x2:1, y2:0, stop:0.369318 rgba(246, 176, 66, 255), stop:1 rgba(249, 237, 78, 255));
+border-radius:20px;
+background-color:qlineargradient(spread:pad, x1:0.006, y1:0.585, x2:1, y2:0, stop:0.369318 rgba(246, 176, 66, 255), stop:1 rgba(249, 237, 78, 255));
+color: black;   
+}
+QPushButton:disabled{
+background-color: rgb(167, 167, 167);
+border:none;
+	color:#14213d;
+}
+</string>
+     </property>
+     <property name="text">
+      <string>انتخاب عکس</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../Images/chooseImage.png</normaloff>../Images/chooseImage.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+    </widget>
+    <widget class="QRadioButton" name="english_rdbtn">
+     <property name="geometry">
+      <rect>
+       <x>150</x>
+       <y>70</y>
+       <width>82</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Gandom</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">QRadioButton{
+color: rgb(255, 255, 255);
+}
+
+QRadioButton::indicator::checked{
+width:15px;
+height:15px;
+  border-radius:7px;	
+	background-color: qlineargradient(spread:pad, x1:0.006, y1:0.585, x2:1, y2:0, stop:0.369318 rgba(246, 176, 66, 255), stop:1 rgba(249, 237, 78, 255));
+	color: rgb(255, 255, 255);
+}
+QRadioButton::indicator::unchecked {
+width:12px;
+height:12px;
+  border-radius:7px;
+	border:2px solid qlineargradient(spread:pad, x1:0.006, y1:0.585, x2:1, y2:0, stop:0.369318 rgba(246, 176, 66, 255), stop:1 rgba(249, 237, 78, 255));;
+	background-color: none;
+
+}</string>
+     </property>
+     <property name="text">
+      <string>انگلیسی</string>
+     </property>
+     <property name="checked">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="Title">
+     <property name="geometry">
+      <rect>
+       <x>32</x>
+       <y>18</y>
+       <width>231</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>A Salamat</family>
+       <pointsize>10</pointsize>
+       <weight>50</weight>
+       <bold>false</bold>
+       <kerning>true</kerning>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">
+color: #a7a7a7;
+border:none;</string>
+     </property>
+     <property name="text">
+      <string>Toolbox &lt;span style=&quot; font-size:11pt; font-weight:600;&quot;&gt;-&lt;/span&gt; OCR</string>
+     </property>
+     <property name="scaledContents">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="ExitButton">
+     <property name="geometry">
+      <rect>
+       <x>455</x>
+       <y>20</y>
+       <width>25</width>
+       <height>25</height>
+      </rect>
+     </property>
+     <property name="cursor">
+      <cursorShape>PointingHandCursor</cursorShape>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"/>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../Images/Exit.png</normaloff>../Images/Exit.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>20</width>
+       <height>20</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPlainTextEdit" name="plainTextEdit">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>170</y>
+       <width>461</width>
+       <height>151</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Gandom</family>
+       <pointsize>10</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:1px solid qlineargradient(spread:pad, x1:0.006, y1:0.585, x2:1, y2:0, stop:0.369318 rgba(246, 176, 66, 255), stop:1 rgba(249, 237, 78, 255));;
+color: rgb(255, 255, 255);
+</string>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="plainText">
+      <string>سلام خوبی؟سلام خوبی؟سلام خوبی؟  سلام خوبی؟سلام خوبی؟سلام خوبی؟سلام خوبی؟ سلام خوبی؟سلام خوبی؟ سلام خوبی؟سلام خوبی؟سلام خوبی؟ سلام خوبی؟سلام خوبی؟سلام خوبی؟</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
