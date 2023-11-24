@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>500</width>
-    <height>400</height>
+    <height>450</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@
       <x>0</x>
       <y>0</y>
       <width>500</width>
-      <height>400</height>
+      <height>450</height>
      </rect>
     </property>
     <property name="styleSheet">
@@ -306,7 +306,30 @@ color: rgb(255, 255, 255);
       <bool>true</bool>
      </property>
      <property name="plainText">
-      <string>سلام خوبی؟سلام خوبی؟سلام خوبی؟  سلام خوبی؟سلام خوبی؟سلام خوبی؟سلام خوبی؟ سلام خوبی؟سلام خوبی؟ سلام خوبی؟سلام خوبی؟سلام خوبی؟ سلام خوبی؟سلام خوبی؟سلام خوبی؟</string>
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>400</y>
+       <width>91</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Gandom</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">border:none;
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>ذخیره شد</string>
      </property>
     </widget>
    </widget>
