@@ -136,7 +136,7 @@ class Ui_PDFCreator(object):
         self.label_2.setScaledContents(True)
         self.label_2.setObjectName("label_2")
         self.frame_2 = QtWidgets.QFrame(parent=self.centralwidget)
-        self.frame_2.setGeometry(QtCore.QRect(20, 1100, 461, 291))
+        self.frame_2.setGeometry(QtCore.QRect(20, 80, 461, 291))
         self.frame_2.setStyleSheet("border:none;\n"
 "background-color: rgb(20, 33, 61);")
         self.frame_2.setFrameShape(QtWidgets.QFrame.Shape.StyledPanel)
