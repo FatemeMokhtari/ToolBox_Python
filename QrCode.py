@@ -16,11 +16,13 @@ class QrCode(QMainWindow):
         self.ui = Ui_MainWindow()
         self.ui.setupUi(self)
         
-         ## REMOVE TITLE BAR
-        #self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
-        #self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        ## REMOVE TITLE BAR
         
-            
+        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        
+        
+          
         def location():            
             filepathgif, _ = QtWidgets.QFileDialog.getSaveFileName(None, "Save file", "", "Image files (*.png)")
             if len(filepathgif) > 0:                

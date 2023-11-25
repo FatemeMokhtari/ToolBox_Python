@@ -22,6 +22,9 @@ class Weather(QMainWindow):
         self.ui.setupUi(self)
         
         
+        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        
         global wheather_type 
         
         

@@ -29,7 +29,10 @@ class OCR(QMainWindow):
         self.ui = Ui_OCR()
         self.ui.setupUi(self)
 
-
+        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        
+        
         pytesseract.pytesseract.tesseract_cmd = "C:/Program Files/Tesseract-OCR/tesseract.exe"
 
         def chooseFile():

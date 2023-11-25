@@ -23,6 +23,12 @@ class VideoToGif(QMainWindow):
         self.ui = Ui_RemoveBG()
         self.ui.setupUi(self)
         
+        
+        
+        self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
+        self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
+        
+        
         def selectfile():
             global file_path
             file_path = filedialog.askopenfilename(title="Open Video File", filetypes=[("Video files", "*mp4")])
