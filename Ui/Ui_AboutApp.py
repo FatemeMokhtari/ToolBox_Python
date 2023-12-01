@@ -37,7 +37,7 @@ class Ui_MainWindow(object):
         self.ExitButton.setStyleSheet("")
         self.ExitButton.setText("")
         icon = QtGui.QIcon()
-        icon.addPixmap(QtGui.QPixmap("../Images/Exit.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon.addPixmap(QtGui.QPixmap("D:\Project\Final\ToolBox/Images/Exit.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.ExitButton.setIcon(icon)
         self.ExitButton.setIconSize(QtCore.QSize(20, 20))
         self.ExitButton.setFlat(True)
