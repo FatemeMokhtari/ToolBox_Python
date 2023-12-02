@@ -1,9 +1,8 @@
 import sys
-import os
-import platform
+
 from PySide6 import QtCore, QtGui, QtWidgets
-from PySide6.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
+from PySide6.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent, QRegularExpression as QRegExp)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient, QRegularExpressionValidator as QRegExpValidator)
 from PySide6.QtWidgets import *
 import jdatetime
 from tkinter import messagebox
@@ -98,6 +97,13 @@ class DateConverter(QMainWindow):
         self.ui.edt_day.setMaxLength(2)
         self.ui.edtmonth.setMaxLength(2)
         self.ui.edtyear.setMaxLength(4)
+        
+        regex = QRegExp("^[ 0-9]+$")
+        validator = QRegExpValidator(regex)       
+        
+        self.ui.edt_day.setValidator(validator)
+        self.ui.edtmonth.setValidator(validator)
+        self.ui.edtyear.setValidator(validator)
         
         
         self.ui.ExitButton.clicked.connect(close)
