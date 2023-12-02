@@ -94,7 +94,10 @@ class MainWindow(QMainWindow):
             PathPy = dir_path +"\\UnitConverter.py"
             os.system('%s %s' % (pyexec, PathPy))
             
-            
+        def About():
+            dir_path = os.path.dirname(os.path.realpath(__file__))            
+            PathPy = dir_path +"\\AboutApp.py"
+            os.system('%s %s' % (pyexec, PathPy))   
                 
         def close():
             sys.exit(app.exec())            
@@ -117,6 +120,7 @@ class MainWindow(QMainWindow):
         self.uimain.WeatherBtn.clicked.connect(weather)
         self.uimain.ExitButton.clicked.connect(close)
         self.uimain.ConvertUnitBtn.clicked.connect(unit)
+        self.uimain.AboutmeBtn.clicked.connect(About)
         # MAIN WINDOW LABEL
         #QtCore.QTimer.singleShot(1500, lambda: self.ui.label.setText("<strong>THANKS</strong> FOR WATCHING"))
         #QtCore.QTimer.singleShot(1500, lambda: self.setStyleSheet("background-color: #222; color: #FFF"))
