@@ -15,11 +15,11 @@ from PySide6.QtWidgets import *
 class Ui_MainWindow(object):
     def setupUi(self, MainWindow):
         MainWindow.setObjectName("MainWindow")
-        MainWindow.resize(980, 600)
+        MainWindow.resize(870, 600)
         self.centralwidget = QtWidgets.QWidget(parent=MainWindow)
         self.centralwidget.setObjectName("centralwidget")
         self.frame = QtWidgets.QFrame(parent=self.centralwidget)
-        self.frame.setGeometry(QtCore.QRect(0, 0, 980, 600))
+        self.frame.setGeometry(QtCore.QRect(0, 0, 870, 600))
         self.frame.setStyleSheet("QFrame{\n"
 "    background-color:#14213d;\n"
 "    border:6px solid #FFDB70;\n"
@@ -32,7 +32,7 @@ class Ui_MainWindow(object):
         self.frame.setFrameShadow(QtWidgets.QFrame.Shadow.Raised)
         self.frame.setObjectName("frame")
         self.ExitButton = QtWidgets.QPushButton(parent=self.frame)
-        self.ExitButton.setGeometry(QtCore.QRect(930, 20, 25, 25))
+        self.ExitButton.setGeometry(QtCore.QRect(820, 20, 25, 25))
         self.ExitButton.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
         self.ExitButton.setStyleSheet("")
         self.ExitButton.setText("")
@@ -43,7 +43,7 @@ class Ui_MainWindow(object):
         self.ExitButton.setFlat(True)
         self.ExitButton.setObjectName("ExitButton")
         self.label = QtWidgets.QLabel(parent=self.frame)
-        self.label.setGeometry(QtCore.QRect(250, 80, 500, 100))
+        self.label.setGeometry(QtCore.QRect(190, 80, 500, 100))
         font = QtGui.QFont()
         font.setFamily("Gandom")
         font.setPointSize(24)
@@ -55,7 +55,7 @@ class Ui_MainWindow(object):
         self.label.setAlignment(QtCore.Qt.AlignmentFlag.AlignCenter)
         self.label.setObjectName("label")
         self.label_2 = QtWidgets.QLabel(parent=self.frame)
-        self.label_2.setGeometry(QtCore.QRect(40, 240, 891, 131))
+        self.label_2.setGeometry(QtCore.QRect(40, 240, 791, 201))
         font = QtGui.QFont()
         font.setFamily("Gandom")
         font.setPointSize(10)
@@ -67,7 +67,7 @@ class Ui_MainWindow(object):
         self.label_2.setWordWrap(True)
         self.label_2.setObjectName("label_2")
         self.label_3 = QtWidgets.QLabel(parent=self.frame)
-        self.label_3.setGeometry(QtCore.QRect(680, 420, 251, 20))
+        self.label_3.setGeometry(QtCore.QRect(560, 480, 251, 20))
         font = QtGui.QFont()
         font.setFamily("Gandom")
         font.setPointSize(10)
@@ -76,7 +76,7 @@ class Ui_MainWindow(object):
         self.label_3.setWordWrap(True)
         self.label_3.setObjectName("label_3")
         self.label_4 = QtWidgets.QLabel(parent=self.frame)
-        self.label_4.setGeometry(QtCore.QRect(670, 460, 251, 20))
+        self.label_4.setGeometry(QtCore.QRect(560, 520, 251, 20))
         font = QtGui.QFont()
         font.setFamily("Gandom")
         font.setPointSize(10)
@@ -93,6 +93,6 @@ class Ui_MainWindow(object):
         _translate = QtCore.QCoreApplication.translate
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.label.setText(_translate("MainWindow", "هرچه می‌خواهید اینجاست!"))
-        self.label_2.setText(_translate("MainWindow", "<html><head/><body><p align=\"right\" style=\"line-height:1.5\"><span style=\" font-size:12pt;\">احتمالا این ضرب‌المثل را شنیده‌اید که می‌گوید: «از هر انگشتش یک هنر می‌بارد». این اپلیکیشن به معنای واقعی کلمه، از هر انگشتش یک هنر می‌بارد. امروزه با توجه به پیشرفت چشمگیر تکنولوژی، قطعا اپلیکیشنی جامع و کامل که نیازهای روزمره‌ی‌مان را برطرف کند ضروری است. جعبه ابزار، جعبه‌ای است حاوی 11 ابزار ضروری و مورد نیاز شما که هر یک از آن‌ها قطعا در جایی به کارتان خواهد آمد.</span></p></body></html>"))
+        self.label_2.setText(_translate("MainWindow", "<html><head/><body><p align=\"right\" style=\" line-height:1.5\"><span style=\" font-size:12pt;\">احتمالا این ضرب‌المثل را شنیده‌اید که می‌گوید: «از هر انگشتش یک هنر می‌بارد». این اپلیکیشن به معنای واقعی کلمه، از هر انگشتش یک هنر می‌بارد. امروزه با توجه به پیشرفت چشمگیر تکنولوژی، قطعا اپلیکیشنی جامع و کامل که نیازهای روزمره‌ی‌مان را برطرف کند ضروری است. جعبه ابزار، جعبه‌ای است حاوی 11 ابزار ضروری و مورد نیاز شما که هر یک از آن‌ها قطعا در جایی به کارتان خواهد آمد</span></p></body></html>"))
         self.label_3.setText(_translate("MainWindow", "ایمیل : fatemeh.s.mokhtari@gmail.com"))
         self.label_4.setText(_translate("MainWindow", "گیت هاب: fatememokhtari"))
