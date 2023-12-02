@@ -235,6 +235,38 @@ color: white;</string>
       <set>Qt::AlignCenter</set>
      </property>
     </widget>
+    <widget class="QPushButton" name="clearbtn">
+     <property name="geometry">
+      <rect>
+       <x>50</x>
+       <y>110</y>
+       <width>20</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="toolTip">
+      <string>پاک کردن</string>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">background-color:none;</string>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../Images/clear.png</normaloff>../Images/clear.png</iconset>
+     </property>
+     <property name="iconSize">
+      <size>
+       <width>25</width>
+       <height>25</height>
+      </size>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
     <zorder>label</zorder>
     <zorder>btnshow</zorder>
     <zorder>savebtn</zorder>
@@ -242,6 +274,7 @@ color: white;</string>
     <zorder>ExitButton</zorder>
     <zorder>Title</zorder>
     <zorder>label_2</zorder>
+    <zorder>clearbtn</zorder>
    </widget>
   </widget>
  </widget>
