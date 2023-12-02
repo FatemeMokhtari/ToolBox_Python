@@ -7,10 +7,10 @@ from PySide6.QtWidgets import *
 import jdatetime
 from tkinter import messagebox
 
-## ==> SPLASH SCREEN
+
 from Ui.Ui_DateConverter import Ui_MainWindow
     
-# SPLASH SCREEN
+
 class DateConverter(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
@@ -22,9 +22,7 @@ class DateConverter(QMainWindow):
         self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
         
-        def close():  
-            #QApplication.quit()   
-            #window.destroy()       
+        def close():                   
             sys.exit(app.exec())
             
             
@@ -71,16 +69,25 @@ class DateConverter(QMainWindow):
             except:
                 print("Could not request resultsmiladi;")
                 
+        def srv():
+            if self.ui.radioButtonmiladi.isChecked():
+                if int(self.ui.edt_day.text()) <= 31 and int(self.ui.edtmonth.text()) <=6:
+                    return True
+                elif int(self.ui.edt_day.text()) <= 30 and int(self.ui.edtmonth.text()) >=7:
+                    return True
+                else:    
+                    messagebox.showerror("خطا", "لطفا مقدار ماه/روز را درست وارد کنید.")
                 
+                     
         def toMiladi():
             try:
                 if(checkemptytxtbox()): 
-                                
-                    day = int(self.ui.edt_day.text())
-                    month = int(self.ui.edtmonth.text())
-                    year = int(self.ui.edtyear.text())
-                    result = str(jdatetime.date(day = day , month = month , year= year ).togregorian())
-                    self.ui.labeldate.setText(result)
+                    if srv():            
+                        day = int(self.ui.edt_day.text())
+                        month = int(self.ui.edtmonth.text())
+                        year = int(self.ui.edtyear.text())
+                        result = str(jdatetime.date(day = day , month = month , year= year ).togregorian())
+                        self.ui.labeldate.setText(result)
             except:
                 print("Could not request resultsmiladi;")
                       
