@@ -2,8 +2,8 @@ import sys
 import os
 import platform
 from PySide6 import QtCore, QtGui, QtWidgets
-from PySide6.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
+from PySide6.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent, QRegularExpression as QRegExp)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient, QRegularExpressionValidator as QRegExpValidator)
 from PySide6.QtWidgets import *
 
 ## ==> SPLASH SCREEN
@@ -124,6 +124,10 @@ class OCR(QMainWindow):
         self.ui.txtUrl.textChanged.connect(tst)
         self.ui.comboBox.currentTextChanged.connect(tst)
         self.ui.label_2.setWordWrap(True)
+        
+        regex = QRegExp("^[ 0-9]+$")
+        validator = QRegExpValidator(regex)        
+        self.ui.txtUrl.setValidator(validator)
         
         self.show()
         
