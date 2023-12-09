@@ -1,28 +1,15 @@
 import pytesseract
-from pytesseract import Output
 from PIL import Image
-import cv2 as cv
-import matplotlib.pyplot as plt
-
-
-
 from tkinter import filedialog
-
 import sys
-import os
-import platform
 from PySide6 import QtCore, QtGui, QtWidgets
 from PySide6.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
 from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
 from PySide6.QtWidgets import *
+import aspose.words as aw
 
-## ==> SPLASH SCREEN
 from Ui.Ui_OCR import Ui_OCR
 
-
-
-    
-# SPLASH SCREEN
 class OCR(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
@@ -38,8 +25,7 @@ class OCR(QMainWindow):
         def chooseFile():
             file_path = filedialog.askopenfilename(title="Open Image File", filetypes=[("Image files", "*.png *.jpg *.jpeg")])
             if file_path:
-                lang = radiobtncheck()
-                #print(lang)
+                lang = radiobtncheck()                
                 convert(file_path,lang)
                 
                 
@@ -47,13 +33,12 @@ class OCR(QMainWindow):
         def radiobtncheck():
             
             if self.ui.english_rdbtn.isChecked():
-                #self.ui.persian_rdbtn.setChecked(False)
+               
                 return "english"
             elif self.ui.persian_rdbtn.isChecked():
-                #self.ui.english_rdbtn.setChecked(False)
+                
                 return "persian" 
-            #else:
-              #  self.ui.label.setText("en or per???")
+            
 
         def convert(file_path, lang):
             try:
@@ -77,17 +62,21 @@ class OCR(QMainWindow):
                 print("error")
            
         def save():
-            filename, _ = QtWidgets.QFileDialog.getSaveFileName(None, "Save file", "", "Text files (*.txt)")
+            filename, _ = QtWidgets.QFileDialog.getSaveFileName(None, "Save file", "", ("*.txt;;*.doc;;*.docx"))            
             if filename:
-                with open(filename, "w", encoding="utf-8") as f:
-                    f.write(self.ui.textEdit.toPlainText())
+                if _.format() == "*.docx":
+                    doc = aw.Document()
+                    builder = aw.DocumentBuilder(doc)
+                    builder.write(self.ui.textEdit.toPlainText())                                    
+                    doc.save(filename)
+                else: 
+                    with open(filename, "w") as f:
+                        f.write(self.ui.textEdit.toPlainText())
                     
                 self.ui.label.setVisible(True)
                 QtCore.QTimer.singleShot(5000, lambda:self.ui.label.setVisible(False))
         
-        def close():  
-            #QApplication.quit()   
-            #window.destroy()       
+        def close():                 
             sys.exit(app.exec())
             
         self.ui.textEdit.setAlignment(Qt.AlignLeft)      
