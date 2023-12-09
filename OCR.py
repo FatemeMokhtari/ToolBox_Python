@@ -6,7 +6,9 @@ from PySide6 import QtCore, QtGui, QtWidgets
 from PySide6.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
 from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
 from PySide6.QtWidgets import *
-import aspose.words as aw
+
+#import comtypes.client
+from docx import Document
 
 from Ui.Ui_OCR import Ui_OCR
 
@@ -59,18 +61,18 @@ class OCR(QMainWindow):
                 
                 
             except:
-                print("error")
-           
+                print("error")       
+                
+              
         def save():
             filename, _ = QtWidgets.QFileDialog.getSaveFileName(None, "Save file", "", ("*.txt;;*.doc;;*.docx"))            
             if filename:
                 if _.format() == "*.docx":
-                    doc = aw.Document()
-                    builder = aw.DocumentBuilder(doc)
-                    builder.write(self.ui.textEdit.toPlainText())                                    
-                    doc.save(filename)
+                    document = Document()
+                    document.add_paragraph(self.ui.textEdit.toPlainText())
+                    document.save(filename)                    
                 else: 
-                    with open(filename, "w") as f:
+                    with open(filename, "w", encoding="utf-8") as f:
                         f.write(self.ui.textEdit.toPlainText())
                     
                 self.ui.label.setVisible(True)
