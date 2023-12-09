@@ -15,7 +15,7 @@ from Ui.Ui_Main import Ui_MainWindow
 ## ==> GLOBALS
 counter = 0
 
-# YOUR APPLICATION
+# APPLICATION
 class MainWindow(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
@@ -121,9 +121,7 @@ class MainWindow(QMainWindow):
         self.uimain.ExitButton.clicked.connect(close)
         self.uimain.ConvertUnitBtn.clicked.connect(unit)
         self.uimain.AboutmeBtn.clicked.connect(About)
-        # MAIN WINDOW LABEL
-        #QtCore.QTimer.singleShot(1500, lambda: self.ui.label.setText("<strong>THANKS</strong> FOR WATCHING"))
-        #QtCore.QTimer.singleShot(1500, lambda: self.setStyleSheet("background-color: #222; color: #FFF"))
+        
 
 
 # SPLASH SCREEN
@@ -134,21 +132,11 @@ class SplashScreen(QMainWindow):
         self.ui.setupUi(self)
 
         
-        ## UI ==> INTERFACE CODES
-        ########################################################################
-
+        
         ## REMOVE TITLE BAR
         self.setWindowFlag(QtCore.Qt.FramelessWindowHint)
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)
 
-
-        ## DROP SHADOW EFFECT
-        #self.shadow = QGraphicsDropShadowEffect(self)
-        #self.shadow.setBlurRadius(20)
-        #self.shadow.setXOffset(0)
-        #self.shadow.setYOffset(0)
-        #self.shadow.setColor(QColor(0, 0, 0, 60))
-        #self.ui.dropShadowFrame.setGraphicsEffect(self.shadow)
 
         ## QTIMER ==> START
         self.timer = QtCore.QTimer()
