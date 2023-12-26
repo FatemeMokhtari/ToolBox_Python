@@ -11,6 +11,7 @@ from PySide6.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTi
 from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
 from PySide6.QtWidgets import *
 
+
 class Ui_PDFCreator(object):
     def setupUi(self, PDFCreator):
         PDFCreator.setObjectName("PDFCreator")
@@ -84,7 +85,7 @@ class Ui_PDFCreator(object):
 "}")
         self.selectfile_btn.setText("")
         icon2 = QtGui.QIcon()
-        icon2.addPixmap(QtGui.QPixmap(r"D:\Project\Final\ToolBox\Images\chooseImage.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        icon2.addPixmap(QtGui.QPixmap(r"D:\Project\Final\ToolBox\Images/chooseImage.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
         self.selectfile_btn.setIcon(icon2)
         self.selectfile_btn.setIconSize(QtCore.QSize(36, 36))
         self.selectfile_btn.setCheckable(True)
@@ -132,9 +133,92 @@ class Ui_PDFCreator(object):
         self.label_2.setGeometry(QtCore.QRect(148, 150, 135, 36))
         self.label_2.setStyleSheet("border:none;")
         self.label_2.setText("")
-        
+        self.label_2.setPixmap(QtGui.QPixmap(r"D:\Project\Final\ToolBox\Images\Done.gif"))
         self.label_2.setScaledContents(True)
         self.label_2.setObjectName("label_2")
+        self.selectTextfilebtn = QtWidgets.QPushButton(parent=self.frame)
+        self.selectTextfilebtn.setEnabled(True)
+        self.selectTextfilebtn.setGeometry(QtCore.QRect(60, 135, 50, 50))
+        font = QtGui.QFont()
+        font.setFamily("Gandom")
+        font.setPointSize(13)
+        self.selectTextfilebtn.setFont(font)
+        self.selectTextfilebtn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.selectTextfilebtn.setStyleSheet("QPushButton{\n"
+"\n"
+"border: 2px solid qlineargradient(spread:pad, x1:0.006, y1:0.585, x2:1, y2:0, stop:0.369318 rgba(246, 176, 66, 255), stop:1 rgba(249, 237, 78, 255));\n"
+"border-radius:20px;\n"
+"background-color:qlineargradient(spread:pad, x1:0.006, y1:0.585, x2:1, y2:0, stop:0.369318 rgba(246, 176, 66, 255), stop:1 rgba(249, 237, 78, 255));\n"
+"color: black;   \n"
+"}\n"
+"QPushButton:disabled{\n"
+"background-color: rgb(167, 167, 167);\n"
+"border:none;\n"
+"    color:#14213d;\n"
+"}")
+        self.selectTextfilebtn.setText("")
+        icon3 = QtGui.QIcon()
+        icon3.addPixmap(QtGui.QPixmap(r"D:\Project\Final\ToolBox\Images/choosetextfile.png"), QtGui.QIcon.Mode.Normal, QtGui.QIcon.State.Off)
+        self.selectTextfilebtn.setIcon(icon3)
+        self.selectTextfilebtn.setIconSize(QtCore.QSize(33, 33))
+        self.selectTextfilebtn.setCheckable(True)
+        self.selectTextfilebtn.setChecked(False)
+        self.selectTextfilebtn.setObjectName("selectTextfilebtn")
+        self.Text_rdbtn = QtWidgets.QRadioButton(parent=self.frame)
+        self.Text_rdbtn.setGeometry(QtCore.QRect(280, 80, 111, 21))
+        font = QtGui.QFont()
+        font.setFamily("Gandom")
+        font.setPointSize(10)
+        self.Text_rdbtn.setFont(font)
+        self.Text_rdbtn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.Text_rdbtn.setStyleSheet("QRadioButton{\n"
+"color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QRadioButton::indicator::checked{\n"
+"width:15px;\n"
+"height:15px;\n"
+"  border-radius:7px;    \n"
+"    background-color: qlineargradient(spread:pad, x1:0.006, y1:0.585, x2:1, y2:0, stop:0.369318 rgba(246, 176, 66, 255), stop:1 rgba(249, 237, 78, 255));\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"QRadioButton::indicator::unchecked {\n"
+"width:12px;\n"
+"height:12px;\n"
+"  border-radius:7px;\n"
+"    border:2px solid qlineargradient(spread:pad, x1:0.006, y1:0.585, x2:1, y2:0, stop:0.369318 rgba(246, 176, 66, 255), stop:1 rgba(249, 237, 78, 255));;\n"
+"    background-color: none;\n"
+"\n"
+"}")
+        self.Text_rdbtn.setObjectName("Text_rdbtn")
+        self.Image_rdbtn = QtWidgets.QRadioButton(parent=self.frame)
+        self.Image_rdbtn.setGeometry(QtCore.QRect(150, 80, 82, 17))
+        font = QtGui.QFont()
+        font.setFamily("Gandom")
+        font.setPointSize(10)
+        self.Image_rdbtn.setFont(font)
+        self.Image_rdbtn.setCursor(QtGui.QCursor(QtCore.Qt.CursorShape.PointingHandCursor))
+        self.Image_rdbtn.setStyleSheet("QRadioButton{\n"
+"color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QRadioButton::indicator::checked{\n"
+"width:15px;\n"
+"height:15px;\n"
+"  border-radius:7px;    \n"
+"    background-color: qlineargradient(spread:pad, x1:0.006, y1:0.585, x2:1, y2:0, stop:0.369318 rgba(246, 176, 66, 255), stop:1 rgba(249, 237, 78, 255));\n"
+"    color: rgb(255, 255, 255);\n"
+"}\n"
+"QRadioButton::indicator::unchecked {\n"
+"width:12px;\n"
+"height:12px;\n"
+"  border-radius:7px;\n"
+"    border:2px solid qlineargradient(spread:pad, x1:0.006, y1:0.585, x2:1, y2:0, stop:0.369318 rgba(246, 176, 66, 255), stop:1 rgba(249, 237, 78, 255));;\n"
+"    background-color: none;\n"
+"\n"
+"}")
+        self.Image_rdbtn.setChecked(True)
+        self.Image_rdbtn.setObjectName("Image_rdbtn")
         self.frame_2 = QtWidgets.QFrame(parent=self.centralwidget)
         self.frame_2.setGeometry(QtCore.QRect(20, 80, 461, 291))
         self.frame_2.setStyleSheet("border:none;\n"
@@ -191,4 +275,6 @@ class Ui_PDFCreator(object):
         PDFCreator.setWindowTitle(_translate("PDFCreator", "MainWindow"))
         self.Title.setText(_translate("PDFCreator", "Toolbox <span style=\" font-size:11pt; font-weight:600;\">-</span> PDF Creator"))
         self.convert_btn.setText(_translate("PDFCreator", "تبدیل به پی دی اف"))
+        self.Text_rdbtn.setText(_translate("PDFCreator", "متن"))
+        self.Image_rdbtn.setText(_translate("PDFCreator", "عکس"))
         self.label_4.setText(_translate("PDFCreator", "انجام شد"))
