@@ -2,9 +2,8 @@ import pytesseract
 from PIL import Image
 from tkinter import filedialog
 import sys
-from PySide6 import QtCore, QtGui, QtWidgets
-from PySide6.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
+from PySide6 import QtCore, QtWidgets
+from PySide6.QtCore import (Qt)
 from PySide6.QtWidgets import *
 
 #import comtypes.client

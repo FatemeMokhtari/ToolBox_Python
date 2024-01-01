@@ -1,17 +1,15 @@
-from PySide6 import QtCore, QtGui, QtWidgets
-from PySide6.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
+from PySide6 import QtCore, QtWidgets
 from PySide6.QtWidgets import *
 from PySide6.QtGui import QMovie
 import sys
 # importing all necessary libraries
 from rembg import remove
 from PIL import Image
-from tkinter import filedialog , messagebox
+from tkinter import filedialog
 from PIL import Image
 import os
 
-# defining tkinter window
+
 from Ui.Ui_RemoveBG import Ui_RemoveBG
 
 class RemoveBG(QMainWindow):
@@ -26,7 +24,6 @@ class RemoveBG(QMainWindow):
         
         global completed 
 
-        # function to select file from system
         def upload_file():
             global filename
             f_types = [("Image files", "*.png *.jpg *.jpeg")]
@@ -36,7 +33,6 @@ class RemoveBG(QMainWindow):
                 self.ui.btn_digits_2.setEnabled(True)
                 self.ui.label.setText(os.path.split(filename)[1])
                 self.ui.pushButton.setVisible(True)
-                #b1.config(state='disabled')
 
 
         def chechtxt():
@@ -94,7 +90,7 @@ class RemoveBG(QMainWindow):
                                 
             QtCore.QTimer.singleShot(4500, lambda:framevisible())
                        
-        # function to remove backgroung of an image and then show message
+       
         def Convert():
             filepath, _ = QtWidgets.QFileDialog.getSaveFileName(None, "Save file", "", "Image files (*.png)")
             
@@ -102,9 +98,7 @@ class RemoveBG(QMainWindow):
             QtCore.QTimer.singleShot(500, lambda:sa(filepath))
             
         
-        def close():  
-            #QApplication.quit()   
-            #window.destroy()       
+        def close():                  
             sys.exit(app.exec())
         
         

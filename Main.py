@@ -1,9 +1,6 @@
 import sys
 import os
-import platform
-from PySide6 import QtCore, QtGui, QtWidgets
-from PySide6.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
+from PySide6 import QtCore
 from PySide6.QtWidgets import *
 
 ## ==> SPLASH SCREEN
@@ -144,13 +141,7 @@ class SplashScreen(QMainWindow):
         # TIMER IN MILLISECONDS
         self.timer.start(35)
 
-        
-        
-        
-        
-        
-        
-        
+           
         ## SHOW ==> MAIN WINDOW
         ########################################################################
         self.show()

@@ -1,10 +1,7 @@
 import sys
 
-#from PySide6.QtWidgets import QApplication, QMainWindow, QLineEdit
 from PySide6.QtGui import QCloseEvent
-from PySide6 import QtCore, QtGui, QtWidgets
-from PySide6.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
+from PySide6 import QtCore
 from PySide6.QtWidgets import *
 
 import buttons

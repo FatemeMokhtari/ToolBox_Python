@@ -1,18 +1,12 @@
 import sys
-import os
-import platform
-from PySide6 import QtCore, QtGui, QtWidgets
-from PySide6.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent, QRegularExpression as QRegExp)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient, QRegularExpressionValidator as QRegExpValidator)
+from PySide6 import QtCore
+from PySide6.QtCore import (QRegularExpression as QRegExp)
+from PySide6.QtGui import (QRegularExpressionValidator as QRegExpValidator)
 from PySide6.QtWidgets import *
 
-## ==> SPLASH SCREEN
+
 from Ui.Ui_UnitConverter import Ui_MainWindow
 
-
-
-    
-# SPLASH SCREEN
 class OCR(QMainWindow):
     
     def __init__(self):

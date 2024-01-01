@@ -5,9 +5,7 @@ from docx2pdf import convert as cvv
 
 import sys
 import os
-from PySide6 import QtCore, QtGui, QtWidgets
-from PySide6.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
+from PySide6 import QtCore, QtWidgets
 from PySide6.QtWidgets import *
 from PySide6.QtGui import QMovie
 
@@ -154,7 +152,7 @@ class PDFCreator(QMainWindow):
                     if extension == "doc" or extension == "txt":   
                         print("start")
                         
-                        import os
+                        
                         import pdfkit
                         options = {
                             'encoding': "UTF-8",

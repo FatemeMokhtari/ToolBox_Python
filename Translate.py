@@ -1,21 +1,13 @@
 import sys
-import os
-import platform
-from PySide6 import QtCore, QtGui, QtWidgets
-from PySide6.QtCore import (QCoreApplication, QPropertyAnimation, QDate, QDateTime, QMetaObject, QObject, QPoint, QRect, QSize, QTime, QUrl, Qt, QEvent)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor, QFont, QFontDatabase, QIcon, QKeySequence, QLinearGradient, QPalette, QPainter, QPixmap, QRadialGradient)
+from PySide6 import QtCore
 from PySide6.QtWidgets import *
 from googletrans import Translator,LANGUAGES
 import speech_recognition as sr
-from translate import Translator as translatevoice
 
-## ==> SPLASH SCREEN
+
 from Ui.Ui_Translate import Ui_Translate
 
 
-
-    
-# SPLASH SCREEN
 class SplashScreen(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
@@ -163,8 +155,7 @@ class SplashScreen(QMainWindow):
             return switcher.get(test, "nothing")
                   
         def Translateclose():  
-            #QApplication.quit()   
-            #window.destroy()       
+                
             sys.exit(app.exec())
             
         def get_voice():
@@ -174,21 +165,11 @@ class SplashScreen(QMainWindow):
                     audio = r.listen(src)
                     s = self.ui.comboSrc.currentText()
                     er=langcode(s)
-                    #print(er)
                     text = r.recognize_google(audio, language=er)
                     text = text.lower()
                     self.ui.txtSrc.setPlainText(text)                    
                     QtCore.QTimer.singleShot(2500, lambda: self.ui.txtSrc.textChanged.connect(data))
-                    #self.ui.txtDest.
                     
-                    
-                    #d = self.ui.combodest.currentText()
-                    #translator = translatevoice(to_lang='tr')
-                    #translation = translator.translate(text)
-                    #QtCore.QTimer.singleShot(2500, lambda: self.ui.txtdest.setPlainText(translation))
-                    
-        
-                    #show_text(translation)
                     
 
             except sr.RequestError as e:
@@ -204,26 +185,19 @@ class SplashScreen(QMainWindow):
         self.setAttribute(QtCore.Qt.WA_TranslucentBackground)        
         list_text = list(LANGUAGES.values())        
         
-        #self.ui.combosrc.setHidden(True)
         self.ui.comboSrc.addItems(list_text)
         self.ui.comboSrc.setCurrentText("english")
         
         self.ui.comboDest.addItems(list_text)
         self.ui.comboDest.setCurrentText("persian")
-        
-        
-            
+           
         self.ui.txtSrc.textChanged.connect(timertxt)     
 
         self.ui.comboDest.editTextChanged.connect(data)
         
         self.ui.txtDest.setReadOnly(True);
         
-        self.ui.MicButton.clicked.connect(get_voice)       
-        
-        
-        #self.ui.btntext.setText("Translate")
-        #self.ui.btntext.clicked.connect(get_voice)
+        self.ui.MicButton.clicked.connect(get_voice) 
         
         self.ui.ExitButton.clicked.connect(Translateclose)
         self.show()
